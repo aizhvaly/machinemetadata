@@ -1,0 +1,37 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - cluster.x-k8s.io
+  resources:
+  - machinedeployments
+  - machines
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - x-cluster.x-k8s.io
+  resources:
+  - machinemetadata
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - x-cluster.x-k8s.io
+  resources:
+  - machinemetadata/status
+  verbs:
+  - get
+  - patch
+  - update
