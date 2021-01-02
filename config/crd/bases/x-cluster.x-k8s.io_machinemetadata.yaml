@@ -44,6 +44,11 @@ spec:
               description: Annotations is the annotations which must be setted on
                 nodes of MachineDeployment.
               type: object
+            cluster:
+              description: Cluster name is the name of the cluster in which needed
+                reconcile (also mmd will find kubeconfig def capi secrets for cluster
+                "clustername-kubeconfig" as example).
+              type: string
             labels:
               additionalProperties:
                 type: string

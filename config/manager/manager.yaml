@@ -25,6 +25,9 @@ spec:
       containers:
       - command:
         - /manager
+        env:
+          - name: ENABLE_WEBHOOKS
+            value: "false"
         args:
         - --enable-leader-election
         image: controller:latest

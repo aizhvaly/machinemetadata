@@ -25,6 +25,9 @@ type MachineMetadataSpec struct {
 	// MachineDeploymentName is the name of the MachineDeployment this object belongs to.
 	MachineDeploymentName string `json:"machineDeploymentName"`
 
+	// Cluster name is the name of the cluster in which needed reconcile (also mmd will find kubeconfig def capi secrets for cluster "clustername-kubeconfig" as example).
+	// +optional
+	ClusterName string `json:"cluster,omitempty"`
 	// Lables is the labels which must be setted on nodes of MachineDeployment.
 	// +optional
 	Lables map[string]string `json:"labels,omitempty"`

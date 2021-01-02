@@ -1,0 +1,9 @@
+apiVersion: x-cluster.x-k8s.io/v1alpha1
+kind: MachineMetadata
+metadata:
+  name: easy-pizzy
+spec:
+  machineDeploymentName: md-d9smjk-1-8rbnj6
+  Lables:
+    role: idiot
+    idiot: idiot
